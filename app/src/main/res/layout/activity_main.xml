@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:font="@font/cafe"
+        android:fontFamily="@font/cafe"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textFontWeight="5"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ButtonSound"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:onClick="onclickToggleMusic"
+            android:scaleType="fitXY"
+            android:src="@drawable/sound_on" />
+
+        <EditText
+            android:id="@+id/TextSearchInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:ems="10"
+            android:hint="@string/text_search"
+            android:inputType="text"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/cafe"
+            android:textSize="30dp"
+            android:paddingLeft="15dp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:scrollbarThumbVertical="@drawable/shape_scrollbar"
+        android:scrollbars="vertical"
+        android:scrollbarSize="10dp" />
+
+</LinearLayout>
